@@ -14,19 +14,30 @@ public class CloseToTen {
         System.out.println("Enter first number:");
         double firstNumber = scanner.nextDouble();
 
+        if (firstNumber < 0) {
+            System.out.println("Number is incorrect - negative");
+            return;
+        }
+
         System.out.println("Enter second number:");
         double secondNumber = scanner.nextDouble();
 
-        double a;
-        a = 10 - firstNumber;
-        double b;
-        b = 10 - secondNumber;
-
-        if (a > b){
-            System.out.println("value " + firstNumber + " is close to 10");
-        } else {
-            System.out.println("value " + secondNumber + " is close to 10");
+        if (secondNumber < 0) {
+            System.out.println("Number is incorrect - negative");
+            return;
         }
 
+            double a;
+            a = 10 - firstNumber;
+            double b;
+            b = 10 - secondNumber;
+
+            if (a > b) {
+                System.out.println("value " + firstNumber + " is close to 10");
+            } else {
+                System.out.println("value " + secondNumber + " is close to 10");
+            }
+
+        }
     }
-}
+
